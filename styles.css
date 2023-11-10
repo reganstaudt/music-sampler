@@ -1,0 +1,43 @@
+body, h1, p, figure {
+    margin: 0;
+    padding: 0;
+}
+.text-container {
+    max-width: 70ch; 
+    margin: 0 auto; 
+}
+.footer {
+    max-width: 70ch;
+    margin: 0 auto;
+}
+body {
+    background-color: #336699;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+}
+
+#albumCovers img {
+    max-width: 100%;
+}
+audio {
+    text-align: center; 
+    margin: 0 auto;
+}
+
+#songName {
+    font-weight: bold;
+    color:#fff; 
+}
+
+p {
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+    #page-container {
+        padding: 10px;
+    }
+}

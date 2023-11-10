@@ -3,21 +3,24 @@ audioElements.forEach((audio) => {
     audio.style.display = "none";
 });
 
-
-// Show the desired audio element (for example, "playItAgain")
 document.getElementById("playItAgain").style.display = "block";
 
 let albumCovers = document.querySelectorAll('.cover');
+let players = document.querySelectorAll('audio');
 
-// Add a click event listener to each album cover image.
+
 albumCovers.forEach((cover) => {
   cover.addEventListener('click', function () {
-      // Hide all audio elements first.
+    players.forEach(function (el) {
+      el.pause();
+      el.currentTime = 0;
+    });
+    
       audioElements.forEach((audio) => {
           audio.style.display = 'none';
       });
 
-      // Determine which song to play based on the clicked album cover.
+   
       switch (cover.id) {
           case 'party':
               document.getElementById('playItAgain').style.display = 'block';
